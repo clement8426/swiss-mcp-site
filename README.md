@@ -1,69 +1,17 @@
 # swiss-mcp-site
 
-Public website for **Swiss public-data tooling**: the [MCP server](https://github.com/clement8426/swiss-apis-mcp), the [terminal CLI](https://github.com/clement8426/swiss-apis-cli), install guides, and a browsable catalog of tools. Content is available in **English (default)**, **French**, **German**, and **Italian** (`@nuxtjs/i18n`, strategy `prefix_except_default`).
+Site web **vitrine et documentation** autour des outils qui exploitent les **APIs publiques suisses** (transport, cartographie, opendata, parlement, registre du commerce, etc.).
 
-## Related repositories
+## À quoi il sert
 
-| Repo | Role |
-|------|------|
-| [swiss-apis-mcp](https://github.com/clement8426/swiss-apis-mcp) | Model Context Protocol server — tools inside Claude, Cursor, Windsurf, etc. |
-| [swiss-apis-cli](https://github.com/clement8426/swiss-apis-cli) | Standalone `swiss` CLI — same tool names, separate npm package and key file. |
+- **Comprendre** qu’il existe **deux façons** d’utiliser les mêmes briques : un **serveur MCP** (dans un assistant type Claude, Cursor, Windsurf) et une **CLI** `swiss` en terminal — sans les confondre.
+- **Installer** : page dédiée avec comparatif, prérequis, configuration des clients MCP, commandes pour la CLI, et rappel sur les **clés API optionnelles** et les **fichiers de clés** (chemins différents selon MCP ou CLI).
+- **Parcourir** la **liste des outils** (`swiss_*`) : catégories, paramètres, indication si une clé est nécessaire — pour savoir ce que tu peux demander à ton IA ou lancer en ligne de commande.
 
-**npm:** [swiss-apis-mcp](https://www.npmjs.com/package/swiss-apis-mcp) · [swiss-apis-cli](https://www.npmjs.com/package/swiss-apis-cli)
+## Langues
 
-## Stack
+L’interface est proposée en **anglais** (par défaut), **français**, **allemand** et **italien** (sélecteur de langue dans l’en-tête).
 
-- [Nuxt 4](https://nuxt.com/) (Vue 3)
-- [@nuxtjs/i18n](https://i18n.nuxtjs.org/) — locale JSON in `i18n/` (`en.json`, `fr.json`, `de.json`, `it.json`)
-- Tool metadata: `app/composables/useToolsData.ts` (names, categories, parameters — keep in sync with the MCP/CLI tool lists)
+## Où sont les logiciels
 
-## Project layout
-
-```
-app/
-  components/     # AppHeader, AppFooter, AppLangSwitcher, …
-  layouts/
-  pages/          # index, install, tools
-  composables/
-i18n/             # translation files (loaded by @nuxtjs/i18n)
-public/
-nuxt.config.ts
-```
-
-## Setup
-
-```bash
-npm install
-```
-
-## Development
-
-```bash
-npm run dev
-```
-
-App runs at `http://localhost:3000` (default Nuxt port).
-
-## Production build
-
-```bash
-npm run build
-npm run preview   # local preview of the Node server build
-```
-
-Static export (if you use a static host):
-
-```bash
-npm run generate
-```
-
-See [Nuxt deployment](https://nuxt.com/docs/getting-started/deployment) for hosting (Node, serverless, static).
-
-## Editing content
-
-- **UI copy / SEO:** edit `i18n/<locale>.json` and keep keys aligned across all four files.
-- **Tool list / descriptions:** `app/composables/useToolsData.ts` (should reflect what the MCP server and CLI actually expose).
-
-## Licence
-
-Unless stated otherwise in the repository, follow the licence of the parent project you ship this site with (often MIT for the Swiss APIs tooling).
+Le site **ne remplace pas** l’installation des paquets : le MCP et la CLI se récupèrent via **npm** et les dépôts associés ([swiss-apis-mcp](https://github.com/clement8426/swiss-apis-mcp), [swiss-apis-cli](https://github.com/clement8426/swiss-apis-cli)). Le site sert surtout à **guider et à lister** ce qui existe.
