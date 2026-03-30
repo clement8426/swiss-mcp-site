@@ -137,6 +137,15 @@ const sidebarLinks = computed(() => [
         <p class="eyebrow">{{ t('install.eyebrow') }}</p>
         <h1 class="page-title">{{ t('install.title') }}</h1>
         <p class="page-desc">{{ t('install.desc') }}</p>
+        <div class="npm-banner">
+          <p class="npm-banner-title">{{ t('install.npmBannerTitle') }}</p>
+          <p class="npm-banner-body">{{ t('install.npmBannerBody') }}</p>
+          <p class="npm-banner-links">
+            <a href="https://www.npmjs.com/package/swiss-apis-mcp" target="_blank" rel="noopener noreferrer" class="npm-banner-link">{{ t('install.npmLinkMcpLabel') }} ↗</a>
+            <span class="npm-banner-sep">·</span>
+            <a href="https://www.npmjs.com/package/swiss-apis-cli" target="_blank" rel="noopener noreferrer" class="npm-banner-link">{{ t('install.npmLinkCliLabel') }} ↗</a>
+          </p>
+        </div>
       </div>
     </section>
 
@@ -329,11 +338,20 @@ swiss call swiss_check_setup '{}'</code></pre>
               <NuxtLink :to="localePath('/tools')" class="sidebar-resource-link">
                 {{ t('install.browseTools', { count: totalTools }) }}
               </NuxtLink>
+              <a href="https://www.npmjs.com/package/swiss-apis-mcp" target="_blank" rel="noopener noreferrer" class="sidebar-resource-link">
+                {{ t('footer.resourceNpmMcp') }} ↗
+              </a>
               <a href="https://www.npmjs.com/package/swiss-apis-cli" target="_blank" rel="noopener noreferrer" class="sidebar-resource-link">
                 {{ t('footer.resourceNpmCli') }} ↗
               </a>
-              <a href="https://github.com/swiss-apis-mcp/swiss-apis-mcp" target="_blank" rel="noopener noreferrer" class="sidebar-resource-link">
-                {{ t('install.starGithub') }} ↗
+              <a href="https://github.com/clement8426/swiss-apis-mcp" target="_blank" rel="noopener noreferrer" class="sidebar-resource-link">
+                {{ t('footer.resourceGithubMcp') }} ↗
+              </a>
+              <a href="https://github.com/clement8426/swiss-apis-cli" target="_blank" rel="noopener noreferrer" class="sidebar-resource-link">
+                {{ t('footer.resourceGithubCli') }} ↗
+              </a>
+              <a href="https://github.com/clement8426/swiss-mcp-site" target="_blank" rel="noopener noreferrer" class="sidebar-resource-link">
+                {{ t('install.siteGithub') }} ↗
               </a>
               <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener noreferrer" class="sidebar-resource-link">
                 {{ t('install.mcpDocsLink') }} ↗
@@ -356,6 +374,28 @@ swiss call swiss_check_setup '{}'</code></pre>
   margin-bottom: 16px;
 }
 .page-desc { font-size: 16px; color: var(--color-text-soft); max-width: 720px; line-height: 1.7; }
+
+.npm-banner {
+  margin-top: 24px;
+  max-width: 720px;
+  padding: 16px 20px;
+  background: rgba(212,43,43,.08);
+  border: 1px solid rgba(212,43,43,.22);
+  border-radius: var(--radius);
+}
+.npm-banner-title {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-red);
+  margin-bottom: 8px;
+}
+.npm-banner-body { font-size: 14px; color: var(--color-text-soft); line-height: 1.65; margin-bottom: 10px; }
+.npm-banner-links { font-size: 14px; margin: 0; }
+.npm-banner-link { color: var(--color-red); font-weight: 600; }
+.npm-banner-link:hover { text-decoration: underline; }
+.npm-banner-sep { color: var(--color-text-muted); margin: 0 8px; }
 
 .compare-grid {
   display: grid;

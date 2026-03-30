@@ -10,11 +10,11 @@
   },
   "seo": {
     "homeTitle": "APIs publiques suisses — serveur MCP et CLI",
-    "homeDesc": "Deux façons d'utiliser les mêmes outils de données suisses : un serveur MCP pour les assistants IA (Claude, Cursor, …) et une CLI autonome. Transport, géographie, santé, politique, économie, énergie, météo, alimentation et statistiques.",
+    "homeDesc": "Les paquets swiss-apis-mcp et swiss-apis-cli sont sur le registre npm public. MCP dans Claude, Cursor, Windsurf (npx -y swiss-apis-mcp) ou CLI swiss (npm install -g swiss-apis-cli). APIs officielles suisses : transport, géographie, santé, politique, économie, énergie, météo, alimentation, statistiques.",
     "toolsTitle": "Tous les outils — Swiss APIs (MCP et CLI)",
     "toolsDesc": "Parcourez chaque outil par catégorie. Les noms sont les mêmes dans le serveur MCP et dans le paquet swiss-apis-cli.",
     "installTitle": "Installer MCP ou CLI — Swiss APIs",
-    "installDesc": "Installez le serveur MCP dans votre client IA, ou la CLI globalement avec npm — indépendamment. Guides pour Claude Desktop, Cursor, Windsurf et Continue.dev."
+    "installDesc": "Installation depuis npm : MCP via npx -y swiss-apis-mcp dans la config client, ou CLI via npm install -g swiss-apis-cli. Guides pour Claude Desktop, Cursor, Windsurf et Continue.dev."
   },
   "hero": {
     "badgeMcp": "Serveur MCP",
@@ -83,6 +83,8 @@
     "seeAll": "Voir tout →",
     "resourcesTitle": "Ressources",
     "resourceMcpDocs": "Documentation MCP",
+    "resourceGithubMcp": "swiss-apis-mcp sur GitHub",
+    "resourceGithubCli": "swiss-apis-cli sur GitHub",
     "resourceNpmMcp": "swiss-apis-mcp sur npm",
     "resourceNpmCli": "swiss-apis-cli sur npm",
     "resourceOpendata": "opendata.swiss",
@@ -114,6 +116,10 @@
     "eyebrow": "Installation",
     "title": "Serveur MCP ou CLI — à vous de choisir",
     "desc": "Installez uniquement ce dont vous avez besoin. Le serveur MCP se branche sur Claude, Cursor, Windsurf et clients similaires. La CLI est un paquet npm autonome pour le terminal et les scripts. Les deux appellent les mêmes APIs suisses ; les clés optionnelles sont les mêmes, mais les fichiers de clés sont stockés à des emplacements différents.",
+    "npmBannerTitle": "Publié sur npm",
+    "npmBannerBody": "Les deux paquets sont sur le registre public (dernière version : voir npm). MCP — serveur complet pour les APIs officielles suisses. CLI — accès terminal avec les mêmes noms d'outils swiss_*.",
+    "npmLinkMcpLabel": "swiss-apis-mcp",
+    "npmLinkCliLabel": "swiss-apis-cli",
     "compareTitle": "Deux façons d'accéder aux mêmes outils",
     "compareIntro": "Choisissez l'un ou les deux. Ils ne dépendent pas l'un de l'autre.",
     "cardMcpTitle": "Serveur MCP (swiss-apis-mcp)",
@@ -177,7 +183,7 @@
     "sidebarNote": "Pas de compte requis. 30 des 34 outils fonctionnent sans clé API.",
     "sidebarLinks": "Liens utiles",
     "browseTools": "← Parcourir les {count} outils",
-    "starGithub": "Serveur MCP sur GitHub",
+    "siteGithub": "Ce site sur GitHub",
     "pageNav": "Sur cette page",
     "navCompare": "MCP vs CLI",
     "prereqs": "Prérequis",

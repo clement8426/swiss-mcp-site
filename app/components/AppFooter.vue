@@ -23,7 +23,7 @@ const localePath = useLocalePath()
             {{ t('footer.desc', { count: totalTools }) }}
           </p>
           <a
-            href="https://github.com/swiss-apis-mcp/swiss-apis-mcp"
+            href="https://github.com/clement8426/swiss-mcp-site"
             target="_blank"
             rel="noopener noreferrer"
             class="github-link"
@@ -67,6 +67,16 @@ const localePath = useLocalePath()
             <li>
               <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener noreferrer">
                 {{ t('footer.resourceMcpDocs') }} ↗
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/clement8426/swiss-apis-mcp" target="_blank" rel="noopener noreferrer">
+                {{ t('footer.resourceGithubMcp') }} ↗
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/clement8426/swiss-apis-cli" target="_blank" rel="noopener noreferrer">
+                {{ t('footer.resourceGithubCli') }} ↗
               </a>
             </li>
             <li>

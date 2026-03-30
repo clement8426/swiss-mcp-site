@@ -1,3 +1,6 @@
+const siteUrl =
+  process.env.NUXT_PUBLIC_SITE_URL || 'https://github.com/clement8426/swiss-mcp-site'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -30,9 +33,10 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: 'en' },
       meta: [
         { name: 'robots', content: 'index, follow' },
-        { name: 'author', content: 'swiss-apis-mcp' },
+        { name: 'author', content: 'clement8426' },
         { name: 'theme-color', content: '#D42B2B' },
         { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: siteUrl },
         { name: 'twitter:card', content: 'summary_large_image' },
       ],
       link: [
@@ -49,13 +53,12 @@ export default defineNuxtConfig({
           type: 'application/ld+json',
           children: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'SoftwareApplication',
-            name: 'swiss-apis-mcp',
-            applicationCategory: 'DeveloperApplication',
-            operatingSystem: 'macOS, Linux, Windows',
+            '@type': 'WebSite',
+            name: 'Swiss APIs',
             description:
-              'MCP server and CLI for 34 Swiss public-data tools — transport, geography, health, politics, business, energy, weather, food and statistics.',
-            url: 'https://swiss-apis-mcp.dev',
+              'Documentation for swiss-apis-mcp (MCP server) and swiss-apis-cli (terminal CLI) — Swiss official public APIs: transport, geo, health, politics, business, energy, food, statistics.',
+            url: siteUrl,
+            author: { '@type': 'Person', name: 'clement8426' },
             offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
           }),
         },

@@ -42,7 +42,7 @@ watch(() => route.path, () => { menuOpen.value = false })
         <div class="nav-actions">
           <AppLangSwitcher class="hide-mobile" />
           <a
-            href="https://github.com/swiss-apis-mcp/swiss-apis-mcp"
+            href="https://github.com/clement8426/swiss-mcp-site"
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn-ghost hide-mobile"
@@ -75,7 +75,7 @@ watch(() => route.path, () => { menuOpen.value = false })
       </ul>
       <div class="mobile-actions">
         <AppLangSwitcher style="width:100%;justify-content:center" />
-        <a href="https://github.com/swiss-apis-mcp/swiss-apis-mcp" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width:100%;justify-content:center">
+        <a href="https://github.com/clement8426/swiss-mcp-site" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width:100%;justify-content:center">
           {{ t('nav.github') }}
         </a>
         <NuxtLink :to="localePath('/install')" class="btn btn-primary" style="width:100%;justify-content:center">
